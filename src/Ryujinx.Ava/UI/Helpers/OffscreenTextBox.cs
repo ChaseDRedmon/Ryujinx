@@ -31,10 +31,11 @@ namespace Ryujinx.Ava.UI.Helpers
             OnTextInput(new TextInputEventArgs
             {
                 Text = text,
-                Device = KeyboardDevice.Instance,
                 Source = this,
                 RoutedEvent = TextInputEvent,
             });
+            
+            
         }
     }
 }

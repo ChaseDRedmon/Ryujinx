@@ -30,8 +30,8 @@ namespace Ryujinx.Ava.UI.Views.Main
         {
             InitializeComponent();
 
-            ToggleFileTypesMenuItem.Items = GenerateToggleFileTypeItems();
-            ChangeLanguageMenuItem.Items = GenerateLanguageMenuItems();
+            ToggleFileTypesMenuItem.ItemsSource = GenerateToggleFileTypeItems();
+            ChangeLanguageMenuItem.ItemsSource = GenerateLanguageMenuItems();
         }
 
         private CheckBox[] GenerateToggleFileTypeItems()

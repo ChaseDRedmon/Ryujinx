@@ -94,15 +94,14 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Text="{locale:Locale ControllerSettingsProfile}" />
-                    <ui:ComboBox
+                    <ComboBox
                         Grid.Column="1"
-                        IsEditable="True"
                         Name="ProfileBox"
                         HorizontalAlignment="Stretch"
                         VerticalAlignment="Center"
                         SelectedIndex="0"
                         Items="{Binding ProfilesList}"
-                        Text="{Binding ProfileName}" />
+                        PlaceholderText="{Binding ProfileName}" />
                     <Button
                         Grid.Column="2"
                         MinWidth="0"

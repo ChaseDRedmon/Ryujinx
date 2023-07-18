@@ -136,7 +136,7 @@
                             Name="TimeZoneBox"
                             Width="350"
                             FilterMode="Contains"
-                            Items="{Binding TimeZones}"
+                            ItemsSource="{Binding TimeZones}"
                             MaxDropDownHeight="500"
                             SelectionChanged="TimeZoneBox_OnSelectionChanged"
                             Text="{Binding Path=TimeZone, Mode=OneWay}"

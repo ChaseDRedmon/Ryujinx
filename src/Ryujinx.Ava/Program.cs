@@ -1,4 +1,6 @@
 using Avalonia;
+using Avalonia.OpenGL;
+using Avalonia.OpenGL.Egl;
 using Avalonia.Threading;
 using Ryujinx.Ava.UI.Helpers;
 using Ryujinx.Ava.UI.Windows;
@@ -14,6 +16,7 @@ using Ryujinx.Ui.Common;
 using Ryujinx.Ui.Common.Configuration;
 using Ryujinx.Ui.Common.Helper;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -58,16 +61,13 @@ namespace Ryujinx.Ava
                 .With(new X11PlatformOptions
                 {
                     EnableMultiTouch = true,
-                    EnableIme = true,
-                    UseEGL = false,
-                    UseGpu = true,
+                    EnableIme = true
                 })
                 .With(new Win32PlatformOptions
                 {
-                    EnableMultitouch = true,
-                    UseWgl = false,
-                    AllowEglInitialization = false,
-                    CompositionBackdropCornerRadius = 8.0f,
+                    RenderingMode = new[] { Win32RenderingMode.Software },
+                    CompositionMode = new[] { Win32CompositionMode.WinUIComposition },
+                    WinUICompositionBackdropCornerRadius = 8.0f,
                 })
                 .UseSkia();
         }

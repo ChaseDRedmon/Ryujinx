@@ -87,7 +87,8 @@ namespace Ryujinx.Ava.UI.ViewModels
         public AboutWindowViewModel()
         {
             Version = Program.Version;
-
+            
+            
             var assets = AvaloniaLocator.Current.GetService<IAssetLoader>();
 
             if (ConfigurationState.Instance.Ui.BaseStyle.Value == "Light")

@@ -3,6 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Input;
 using Avalonia.Media;
+using Avalonia.Styling;
 using Avalonia.Threading;
 using DynamicData;
 using DynamicData.Binding;
@@ -1188,7 +1189,7 @@ namespace Ryujinx.Ava.UI.ViewModels
                 {
                     Application.Current.Styles.TryGetResource(args.VSyncEnabled
                         ? "VsyncEnabled"
-                        : "VsyncDisabled", out object color);
+                        : "VsyncDisabled", ThemeVariant.Default, out object color);
 
                     if (color is not null)
                     {

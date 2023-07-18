@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Avalonia.Platform;
 using Avalonia.Styling;
 using Avalonia.Threading;
 using FluentAvalonia.Styling;
@@ -97,7 +98,7 @@ namespace Ryujinx.Ava
 
                     baseStyle = ConfigurationState.Instance.Ui.BaseStyle;
                 }
-
+                
                 var theme = AvaloniaLocator.Current.GetService<FluentAvaloniaTheme>();
 
                 theme.RequestedTheme = baseStyle;
